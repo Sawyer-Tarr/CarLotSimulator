@@ -36,10 +36,10 @@ namespace CarLotSimulator
                 EngineNoise = "Vroom",
                 HonkNoise = "Honk",
             };
-            currentCar.MakeEngineNoise();
-            currentCar.MakeHonkNoise();
-
+            //currentCar.MakeEngineNoise();
+            //currentCar.MakeHonkNoise();
             sawyerCarLot.ListOfCars.Add(currentCar);
+            Console.WriteLine($"Number of cars in the lot is: {CarLot.numberOfCars}");
 
             //Dot Notation
             Car nextCar= new Car();
@@ -50,19 +50,20 @@ namespace CarLotSimulator
             nextCar.EngineNoise = "VlomVlom";
             nextCar.HonkNoise = "BamphBamph";
 
-            nextCar.MakeEngineNoise();
-            nextCar.MakeHonkNoise();
+            //nextCar.MakeEngineNoise();
+            //nextCar.MakeHonkNoise();
 
             sawyerCarLot.ListOfCars.Add(nextCar);
+            Console.WriteLine($"Number of cars in the lot is: {CarLot.numberOfCars}");
 
             //Custom
             var oldCar = new Car(2003, "Nissan", "Pathfinder", "romrom", "beep beep", true);
 
-            oldCar.MakeEngineNoise();
-            oldCar.MakeHonkNoise();
+            //oldCar.MakeEngineNoise();
+            //oldCar.MakeHonkNoise();
 
             sawyerCarLot.ListOfCars.Add(oldCar);
-
+            Console.WriteLine($"Number of cars in the lot is: {CarLot.numberOfCars}");
             //*************BONUS X 2*************//
 
             //Create a CarLot class
@@ -76,6 +77,11 @@ namespace CarLotSimulator
                 Console.WriteLine($"Year: {currentcar.Year}. Make: {currentcar.Make}. Model: {currentcar.Model}");
                 Console.WriteLine();
             }
+
+            //Static Exercise 2
+
+            CarLot carLot = new CarLot();
+            CarLot.numberOfCars++;
         }
     }
 }
